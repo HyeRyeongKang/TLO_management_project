@@ -37,3 +37,5 @@ insert into check_list(measure_date,exceed_limit_level) values(now(),2);
 select * from check_list;
 
 select * from alarm_list;
+
+update test
