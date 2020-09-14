@@ -1,0 +1,12 @@
+create table checklist (
+const_site varchar(10) not null,
+created_at int(11) not null,
+exceed_limit_level int(11) not null default 0,
+sens_code varchar(2) not null,
+sect_seq int(11) not null,
+sens_seq int(11) not null,
+name varchar(50),
+is_admin int(11) not null default 0,
+measure_date varchar(8),
+PRIMARY KEY (const_site, exceed_limit_level, sens_code, sect_seq, sens_seq, is_admin)
+);
