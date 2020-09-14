@@ -39,3 +39,5 @@ select * from check_list;
 select * from alarm_list;
 
 update test
+
+update2 test2
