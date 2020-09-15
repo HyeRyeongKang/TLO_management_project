@@ -1,3 +1,4 @@
+///////checklist 테이블
 create table checklist (
 const_site varchar(10) not null,
 created_at int(11) not null,
@@ -9,4 +10,14 @@ name varchar(50),
 is_admin int(11) not null default 0,
 measure_date varchar(8),
 PRIMARY KEY (const_site, exceed_limit_level, sens_code, sect_seq, sens_seq, is_admin)
+);
+
+////////관리자(user) 테이블
+create table user (
+id varchar(20) not null,
+password varchar(20) not null,
+name varchar(20) not null,
+const_site varchar(10) not null,
+phone char(11) not null,
+PRIMARY KEY (id, const_site)
 );
