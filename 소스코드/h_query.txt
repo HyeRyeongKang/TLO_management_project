@@ -16,7 +16,7 @@ PRIMARY KEY (const_site, exceed_limit_level, sens_code, sect_seq, sens_seq, is_a
 create table user (
 userID varchar(20) not null,
 userPassword varchar(20) not null,
-name varchar(20) not null,
+userName varchar(20) not null,
 const_site varchar(10) not null,
 phone char(11) not null,
 PRIMARY KEY (id, const_site)
