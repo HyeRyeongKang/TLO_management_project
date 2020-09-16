@@ -21,3 +21,13 @@ const_site varchar(10) not null,
 phone char(11) not null,
 PRIMARY KEY (id, const_site)
 );
+
+insert into user value('khr6604', 'kang0908', '강혜령', '20031', '01036919891');
+insert into user value('khr6605', 'hye0908', '강혜영', '20071', '01036919892');
+insert into user value('khr6606', 'ryeong0908', '강혜현', '20061', '01036919893');
+
+////////공사현장 테이블
+create table work (
+const_site varchar(10) not null PRIMARY KEY,
+name varchar(50)
+);
