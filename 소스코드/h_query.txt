@@ -11,6 +11,8 @@ is_admin int(11) not null default 0,
 measure_date varchar(8),
 PRIMARY KEY (const_site, exceed_limit_level, sens_code, sect_seq, sens_seq, is_admin)
 );
+insert into checklist value ("20031", 1599634844, 3, "LD", 4, 3, "고양지출 A-1BL 아파트 건설공사", 1, 20090916);
+insert into checklist value ("20061", 1599634808, 1, "IM", 3, 1, "둔촌주공아파트 주택 재건축 정비사업", 0, 20090915);
 
 ////////관리자(user) 테이블
 create table user (
