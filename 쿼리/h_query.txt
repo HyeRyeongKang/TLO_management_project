@@ -1,0 +1,88 @@
+///////checklist 테이블
+create table checklist (
+const_site varchar(10) not null,
+created_at int(11) not null,
+exceed_limit_level int(11) not null default 0,
+sens_code varchar(2) not null,
+sect_seq int(11) not null,
+sens_seq int(11) not null,
+name varchar(50),
+is_admin int(11) not null default 0,
+measure_date varchar(8),
+PRIMARY KEY (const_site, exceed_limit_level, sens_code, sect_seq, sens_seq, is_admin)
+);
+insert into checklist value ("20031", 1599634844, 3, "LD", 4, 3, "고양지출 A-1BL 아파트 건설공사", 1, 20090916);
+insert into checklist value ("20061", 1599634808, 1, "IM", 3, 1, "둔촌주공아파트 주택 재건축 정비사업", 0, 20090915);
+
+////////alarmlist 테이블
+create table alarmlist (
+const_site varchar(10) not null,
+created_at int(11) not null,
+exceed_limit_level int(11) not null default 0,
+sens_code varchar(2) not null,
+sect_seq int(11) not null,
+sens_seq int(11) not null,
+name varchar(50),
+is_admin int(11) not null default 0,
+measure_date varchar(8),
+PRIMARY KEY (const_site, exceed_limit_level, sens_code, sect_seq, sens_seq, is_admin)
+);
+
+delimiter //
+create trigger insert_trigger
+    after insert on checklist
+    for each row
+    begin
+    insert into alarmlist
+    set
+    const_site = new.const_site,
+    created_at = new.created_at,
+    exceed_limit_level = new.exceed_limit_level,
+    sens_code=new.sens_code,
+    sect_seq=new.sect_seq,
+    sens_seq=new.sens_seq,
+    name = new.name,
+    is_admin=new.is_admin,
+    measure_date=new.measure_date;
+    end //
+delimiter ;
+
+////////관리자(user) 테이블
+create table user (
+userID varchar(20) not null,
+userPassword varchar(20) not null,
+userName varchar(20) not null,
+const_site varchar(10) not null,
+phone char(11) not null,
+constName varchar(50),
+PRIMARY KEY (id, const_site)
+);
+
+insert into user value('khr6604', 'kang0908', '강혜령', '20031', '01036919891');
+insert into user value('khr6605', 'hye0908', '강혜영', '20071', '01036919892');
+insert into user value('khr6606', 'ryeong0908', '강혜현', '20061', '01036919893');
+
+////////공사현장 테이블
+create table work (
+const_site varchar(10) not null PRIMARY KEY,
+name varchar(50)
+);
+
+use TLO;
+
+-- insert into checklist value ("20031", 1599634808, 1, "PM", 3, 1, "둔촌주공아파트 주택 재건축 정비사업", 1, 20090915);
+
+-- update user set constName="고양지축 A-1BL 아파트 건설공사" where userID="khr6604";
+-- update user set constName="둔촌주공아파트 주택 재건축 정비사업" where userID="khr6605";
+-- update user set constName="포항일월 및 포항중앙 행복주택 건설공사 1공구" where userID="khr6606";
+
+-- delete from checklist where const_site="20031" and name="둔촌주공아파트 주택 재건축 정비사업";
+
+desc user;
+
+select * from user;
+
+select * 
+from checklist
+left outer join user
+on user.const_site=checklist.const_site;
