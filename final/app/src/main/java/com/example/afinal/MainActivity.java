@@ -67,15 +67,19 @@ public class MainActivity extends AppCompatActivity {
         if(ContextCompat.checkSelfPermission(this,Manifest.permission.READ_PHONE_STATE)!=PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{
                     Manifest.permission.READ_PHONE_STATE}, 100);
+                    getPhoneNum();
         }
+        else{ Log.e("getphone","here");}
 
 
 
         noticeListView = (ListView) findViewById(R.id.noticeListView);
+        noticeListView.setStackFromBottom(true);
         noticeList = new ArrayList<Notice>();
 
         adapter = new NoticeListAdapter(getApplicationContext(), noticeList);
         //adapter.notifyDataSetChanged();
+
         noticeListView.setAdapter(adapter);
 
         new BackgroundTask().execute();
@@ -118,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 getPhoneNum();
                 URL url = new URL(target);
-                String postParameters = "phone="+phone;
+                String postParameters = "phone="+ phone;
                 Log.e("postphone", postParameters);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
@@ -191,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                     noticeName = object.getString("sens_code");
                     noticeDate = object.getString("measure_date");
                     Notice notice = new Notice(noticeContent, noticeName, noticeDate);
-                    noticeList.add(notice);
+                    noticeList.add(0,notice);
                     adapter.notifyDataSetChanged();
                     //noticeListView.setAdapter(adapter);
                     count++;
@@ -213,12 +217,20 @@ public class MainActivity extends AppCompatActivity {
     public void getPhoneNum() {
 
         TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        phone = tm.getLine1Number();
+        if(ContextCompat.checkSelfPermission(this,Manifest.permission.READ_PHONE_STATE)!=PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{
+                    Manifest.permission.READ_PHONE_STATE}, 100);
+            getPhoneNum();
+        }
+        else{ phone = tm.getLine1Number();}
+
+
 
         if (phone != null) {
             phone = phone.replace("+82", "0");
+            //phone = phone.replace("+","");
         }
-        Log.d(TAG, "전화번호 : [ getLine1Number ] >>> "+tm.getLine1Number());
+        //Log.d(TAG, "전화번호 : [ getLine1Number ] >>> "+phone);
     }
 
 }

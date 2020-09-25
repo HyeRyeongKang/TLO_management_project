@@ -16,6 +16,7 @@ public class NoticeListAdapter extends BaseAdapter {
     public NoticeListAdapter(Context context, List<Notice> noticeList) {
         this.context = context;
         this.noticeList = noticeList;
+
     }
 
     @Override

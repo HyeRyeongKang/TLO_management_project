@@ -42,7 +42,6 @@ public class UndeadService extends Service {
     Handler handler = new Handler();
 
     String phone;
-    String TAG = "여기라고오오ㅗ";
     String[] permission_list = {
             Manifest.permission.READ_PHONE_STATE
     };
@@ -162,7 +161,7 @@ public class UndeadService extends Service {
 
                 int responseStatusCode = httpURLConnection.getResponseCode();
 
-                Log.d(TAG, "response code - " + responseStatusCode);
+                Log.d("here", "response code - " + responseStatusCode);
 
                 InputStream inputStream;
                 if (responseStatusCode == HttpURLConnection.HTTP_OK) {
@@ -188,7 +187,7 @@ public class UndeadService extends Service {
 
             } catch (Exception e) {
 
-                Log.e(TAG, "GetData : Error ", e);
+                Log.e("hello", "GetData : Error ", e);
                 String errorString = e.toString();
 
                 return null;
@@ -212,6 +211,7 @@ public class UndeadService extends Service {
                 JSONArray jsonArray = reobject.getJSONArray("response");
                 //JSONObject obj=reobject.getJSONObject("response");
                 String success=jsonArray.getString(0);
+                Log.e("suc", success);
                if (!success.equals("false")) {
                    //JSONArray jsonArray = reobject.getJSONArray("response");
                    Log.e("jsonarray", String.valueOf(jsonArray));
