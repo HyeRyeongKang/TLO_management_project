@@ -21,7 +21,7 @@ if ($phone != "" ){
    if ($stmt->rowCount() == 0)
         {
 	$data = array();
-            $data["success"] = "false";
+           
 	array_push($data, array('phone'=>"false"));
 	if (!$android) {
                 echo "<pre>";

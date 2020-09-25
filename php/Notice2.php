@@ -14,7 +14,7 @@ $android = strpos($_SERVER['HTTP_USER_AGENT'], "Android");
 
 if ($phone != "" ){
 
-    $sql="select * from checklist AS c left outer join user AS u on u.const_site=c.const_site where u.phone='$phone'";
+    $sql="select * from checklist AS c left outer join user AS u on u.const_site=c.const_site where u.phone='$phone' ORDER BY c.measure_date ASC";
     $stmt = $con->prepare($sql);
     $stmt->execute();
  
