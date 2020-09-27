@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            target = "http://165.246.235.155/Notice2.php";
+            target = "http://172.30.1.34/Notice2.php";
         }
         @Override
         protected String doInBackground(Void... voids) {
@@ -198,8 +198,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (phone != null) {
-            phone = phone.replace("+82", "0");
-            //phone = phone.replace("+","");
+            //phone = phone.replace("+82", "0");
+            phone = phone.replace("+","");
+            Log.e("phone",phone);
         }
         return phone;
     }

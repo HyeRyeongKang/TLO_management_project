@@ -79,7 +79,10 @@ public class UndeadService extends Service {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
         builder.setContentIntent(pendingIntent);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            manager.createNotificationChannel(new NotificationChannel("1", "undead_service", NotificationManager.IMPORTANCE_NONE));
+            NotificationChannel notificationChannel = new NotificationChannel("1", "channel_name", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(notificationChannel);
+            //manager.createNotificationChannel(new NotificationChannel("1", "undead_service", NotificationManager.IMPORTANCE_NONE));
         }
         Notification notification = builder.build();
         startForeground(1, notification);
@@ -131,7 +134,7 @@ public class UndeadService extends Service {
 
         @Override
         protected void onPreExecute() {
-            target = "http://165.246.235.155/checklist2.php";
+            target = "http://172.30.1.34/checklist2.php";
         }
 
         @Override
@@ -278,8 +281,8 @@ public class UndeadService extends Service {
         else{ phone = tm.getLine1Number();}
 
         if (phone != null) {
-            phone = phone.replace("+82", "0");
-            //phone = phone.replace("+","");
+            //phone = phone.replace("+82", "0");
+            phone = phone.replace("+","");
         }
         return phone;
     }
