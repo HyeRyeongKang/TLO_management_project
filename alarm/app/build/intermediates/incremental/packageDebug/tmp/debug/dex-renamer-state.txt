@@ -1,0 +1,4 @@
+#Wed Sep 23 18:21:01 KST 2020
+base.0=C\:\\Users\\EUNJIN\\AndroidStudioProjects\\alarm\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

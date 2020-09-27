@@ -1,0 +1,127 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.afinal"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+11-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:5:5-81
+11-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:5:22-78
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:6:5-77
+12-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:6:22-74
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:7:5-67
+13-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:7:22-64
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:8:5-81
+14-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:9:5-79
+15-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:9:22-76
+16    <uses-permission android:name="android.permission.VIBRATE" />
+16-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:10:5-66
+16-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:10:22-63
+17    <uses-permission android:name="android.permission.WAKE_LOCK" />
+17-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:11:5-68
+17-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:11:22-65
+18    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+18-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:12:5-75
+18-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:12:22-72
+19    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+19-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:13:5-77
+19-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:13:22-74
+20    <uses-permission android:name="android.permission.READ_CONTRACTS" />
+20-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:14:5-73
+20-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:14:22-70
+21    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+21-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:15:5-73
+21-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:15:22-70
+22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+22-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:8:5-81
+22-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:8:22-78
+23
+24    <application
+24-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:18:5-55:19
+25        android:allowBackup="true"
+25-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:19:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.3.1] C:\Users\EUNJIN\.gradle\caches\transforms-2\files-2.1\ae3468b444d41a56f261ecbb8448fe17\core-1.3.1\AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/ic_launcher"
+28-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:20:9-43
+29        android:label="@string/app_name"
+29-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:21:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:22:9-54
+31        android:supportsRtl="true"
+31-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:23:9-35
+32        android:testOnly="true"
+33        android:theme="@style/AppTheme" >
+33-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:24:9-40
+34        <receiver
+34-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:25:9-32:20
+35            android:name="com.example.afinal.AutoStart"
+35-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:26:13-38
+36            android:enabled="true"
+36-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:27:13-35
+37            android:exported="true" >
+37-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:28:13-36
+38            <intent-filter>
+38-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:29:13-31:29
+39                <action android:name="android.intent.action.BOOT_COMPLETED" />
+39-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:30:17-79
+39-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:30:25-76
+40            </intent-filter>
+41        </receiver>
+42        <receiver
+42-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:33:9-41:20
+43            android:name="com.example.afinal.AlarmReceiver"
+43-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:34:13-42
+44            android:enabled="true"
+44-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:35:13-35
+45            android:exported="true" >
+45-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:36:13-36
+46            <intent-filter>
+46-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:37:13-40:29
+47                <action android:name="com.test.alarmtestous.ALARM_START" />
+47-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:38:17-76
+47-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:38:25-73
+48                <action android:name="android.intent.action.BOOT_COMPLETED" />
+48-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:30:17-79
+48-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:30:25-76
+49            </intent-filter>
+50        </receiver>
+51
+52        <service
+52-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:43:9-46:39
+53            android:name="com.example.afinal.UndeadService"
+53-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:44:13-42
+54            android:enabled="true"
+54-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:45:13-35
+55            android:exported="true" />
+55-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:46:13-36
+56
+57        <activity android:name="com.example.afinal.MainActivity" >
+57-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:48:9-54:20
+57-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:48:19-47
+58            <intent-filter>
+58-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:49:13-53:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:50:17-69
+59-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:50:25-66
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:52:17-77
+61-->C:\Users\EUNJIN\AndroidStudioProjects\final\app\src\main\AndroidManifest.xml:52:27-74
+62            </intent-filter>
+63        </activity>
+64    </application>
+65
+66</manifest>
